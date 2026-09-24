@@ -30,6 +30,81 @@
           "abnormal": false
         }
       ]
+    },
+    {
+      "code": "PF-002",
+      "source": "构树皮",
+      "vat": "五号缸",
+      "days": 9,
+      "owner": "周茂",
+      "pulpAmount": 260,
+      "status": "可抄纸",
+      "logs": [
+        {
+          "at": "2026-09-22T18:00:00",
+          "step": "状态",
+          "note": "发酵9天，进入可抄纸"
+        }
+      ]
+    },
+    {
+      "code": "PF-003",
+      "source": "竹浆",
+      "vat": "七号缸",
+      "days": 8,
+      "owner": "陈浦",
+      "pulpAmount": 180,
+      "status": "可抄纸",
+      "logs": [
+        {
+          "at": "2026-09-22T19:00:00",
+          "step": "状态",
+          "note": "发酵8天，进入可抄纸"
+        }
+      ]
     }
-  ]
+  ],
+  "rules": {
+    "minWaterVolume": 120,
+    "turbidityLimit": 2,
+    "qualifyChecks": 2,
+    "qualifyGapHours": 4,
+    "requireDifferentOperator": true
+  },
+  "washes": [
+    {
+      "id": "W-demo-2a",
+      "batchCode": "PF-002",
+      "vat": "五号缸",
+      "at": "2026-09-23T08:10:00",
+      "waterVolume": 180,
+      "turbidity": 1.2,
+      "operator": "林素",
+      "result": "合格",
+      "reason": ""
+    },
+    {
+      "id": "W-demo-2b",
+      "batchCode": "PF-002",
+      "vat": "五号缸",
+      "at": "2026-09-23T13:20:00",
+      "waterVolume": 200,
+      "turbidity": 0.8,
+      "operator": "周茂",
+      "result": "合格",
+      "reason": ""
+    },
+    {
+      "id": "W-demo-3a",
+      "batchCode": "PF-003",
+      "vat": "七号缸",
+      "at": "2026-09-23T15:00:00",
+      "waterVolume": 90,
+      "turbidity": 2.6,
+      "operator": "陈浦",
+      "result": "不合格",
+      "reason": "水量不足（低于120升）；浊度超限（高于二度）"
+    }
+  ],
+  "requisitions": []
 }
