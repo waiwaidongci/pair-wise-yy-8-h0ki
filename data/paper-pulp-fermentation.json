@@ -5,6 +5,7 @@
       "source": "构树皮",
       "vat": "三号缸",
       "days": 6,
+      "pulpAmount": 120,
       "owner": "林素",
       "status": "发酵中",
       "logs": [
@@ -31,5 +32,7 @@
         }
       ]
     }
-  ]
+  ],
+  "washings": [],
+  "requisitions": []
 }
